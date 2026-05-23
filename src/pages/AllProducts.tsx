@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { categories } from '@/lib/productsData';
 import BrandMark from '@/components/BrandMark';
+import { submitQuoteRequest } from '@/lib/quoteSubmission';
 
 const categoryIcons = [Camera, Fingerprint, Users, Bell, Phone, ShieldCheck];
 
@@ -19,8 +20,34 @@ const contactInfo = [
 
 export default function AllProducts() {
   const [activeTab, setActiveTab] = useState(0);
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      await submitQuoteRequest(formData, 'all-products-page');
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (error) {
+      console.error('Quote request failed', error);
+      setSubmitError('We could not send your inquiry right now. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#1A1A1A]">
@@ -181,44 +208,71 @@ export default function AllProducts() {
             {/* Right — form */}
             <div className="lg:col-span-3">
               <form
-                onSubmit={(e) => { e.preventDefault(); alert('Thank you! We will contact you soon.'); }}
+                onSubmit={handleSubmit}
                 className="bg-white/[0.04] border border-white/[0.07] rounded-xl p-6 sm:p-8"
               >
                 <h3 className="text-lg font-semibold text-white mb-6">Request a Consultation</h3>
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label className="block text-sm font-medium text-white/70 mb-1.5">Full Name *</label>
-                    <input type="text" required placeholder="Your name"
+                    <input type="text" name="name" required placeholder="Your name"
+                      value={formData.name} onChange={handleChange}
                       className="w-full px-4 py-2.5 bg-white/[0.06] border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-colors" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-white/70 mb-1.5">Email Address *</label>
-                    <input type="email" required placeholder="your@email.com"
+                    <input type="email" name="email" required placeholder="your@email.com"
+                      value={formData.email} onChange={handleChange}
                       className="w-full px-4 py-2.5 bg-white/[0.06] border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-colors" />
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label className="block text-sm font-medium text-white/70 mb-1.5">Phone Number</label>
-                    <input type="tel" placeholder="+966 XX XXX XXXX"
+                    <input type="tel" name="phone" placeholder="+966 XX XXX XXXX"
+                      value={formData.phone} onChange={handleChange}
                       className="w-full px-4 py-2.5 bg-white/[0.06] border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-colors" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-white/70 mb-1.5">Company Name</label>
-                    <input type="text" placeholder="Your company"
+                    <input type="text" name="company" placeholder="Your company"
+                      value={formData.company} onChange={handleChange}
                       className="w-full px-4 py-2.5 bg-white/[0.06] border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-colors" />
                   </div>
                 </div>
                 <div className="mb-6">
                   <label className="block text-sm font-medium text-white/70 mb-1.5">Message *</label>
-                  <textarea required rows={4} placeholder="Tell us about your security requirements..."
+                  <textarea required rows={4} name="message" placeholder="Tell us about your security requirements..."
+                    value={formData.message} onChange={handleChange}
                     className="w-full px-4 py-2.5 bg-white/[0.06] border border-white/10 rounded-lg text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-colors resize-none" />
                 </div>
-                <button type="submit"
+                <button type="submit" disabled={isSubmitting}
                   className="btn-arrow group inline-flex items-center gap-2 bg-[#C8102E] hover:bg-[#A00D24] text-white font-semibold px-6 py-3 rounded-md transition-all hover:scale-[1.02] w-full sm:w-auto justify-center">
-                  <Send className="w-4 h-4" />
-                  Send Inquiry
+                  {isSubmitting ? (
+                    <>
+                      <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                      </svg>
+                      Sending...
+                    </>
+                  ) : submitted ? (
+                    <>
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Inquiry Sent!
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      Send Inquiry
+                    </>
+                  )}
                 </button>
+                {submitError && (
+                  <p className="mt-4 text-sm text-[#ff8f9f]">{submitError}</p>
+                )}
               </form>
             </div>
           </div>

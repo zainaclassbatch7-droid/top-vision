@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
+import { submitQuoteRequest } from '@/lib/quoteSubmission';
 
 const contactInfo = [
   { icon: MapPin, label: 'Office Address', value: 'Khalid bin Al Waleed Street, Opp. Al TAZAJ, Jeddah' },
@@ -11,15 +12,29 @@ const contactInfo = [
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      await submitQuoteRequest(formData, 'contact-section');
+      setSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (error) {
+      console.error('Quote request failed', error);
+      setSubmitError('We could not send your inquiry right now. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -156,9 +171,18 @@ export default function Contact() {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="btn-primary w-full sm:w-auto justify-center"
               >
-                {submitted ? (
+                {isSubmitting ? (
+                  <>
+                    <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                    </svg>
+                    Sending...
+                  </>
+                ) : submitted ? (
                   <>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     Inquiry Sent!
@@ -170,6 +194,10 @@ export default function Contact() {
                   </>
                 )}
               </button>
+
+              {submitError && (
+                <p className="mt-4 text-sm text-[#ff8f9f]">{submitError}</p>
+              )}
             </form>
           </div>
         </div>
