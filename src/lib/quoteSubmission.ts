@@ -26,13 +26,14 @@ export async function submitQuoteRequest(data: QuoteFormData, source: string) {
 
   const response = await fetch(SHEET_WEBHOOK_URL, {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'text/plain;charset=utf-8',
     },
     body: JSON.stringify(payload),
   });
 
-  if (!response.ok) {
-    throw new Error(`Request failed with status ${response.status}`);
-  }
+  // Google Apps Script web apps often return opaque responses in the browser.
+  // If fetch resolves, we treat the submission as sent.
+  void response;
 }
