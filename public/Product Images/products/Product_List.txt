@@ -1,0 +1,116 @@
+================================================================================
+                    PRODUCT CATALOG - 76 PRODUCTS
+================================================================================
+
+All images are in 1:1 square aspect ratio with white background.
+Location: /mnt/okcomputer/output/products/
+
+================================================================================
+CCTV SYSTEMS (21 Products)
+================================================================================
+
+01. DS-2CE56D5T-IRM - Hikvision Dome Camera
+02. DS-2CE16D5T-IT3 - Hikvision Bullet Camera
+03. DS-2CE56C2T-IRP - Hikvision Dome Camera with IR
+04. DS-2CD2132F-IS - Hikvision Network Dome Camera
+05. DS-7204HGHI-SH - Hikvision 4-Channel DVR
+06. CTEC Dome Camera - CTEC Vandal-Resistant Dome
+07. DS-2CE56D5T-VFIR - Hikvision Varifocal Dome Camera
+08. DS-2CE16D5T-VFIT3 - Hikvision Varifocal Bullet Camera
+09. DS-2CE16C2T-IR - Hikvision IR Bullet Camera
+10. DS-2CD2732F-IS - Hikvision Network IR Dome
+11. DS-7208HQHI-SH - Hikvision 8-Channel DVR
+12. CTEC Bullet Camera - CTEC Outdoor Bullet Camera
+13. DS-2CE16D5T-IR - Hikvision IR Bullet Camera
+14. DS-2AE7230TI-A - Hikvision PTZ Speed Dome Camera
+15. DS-2CE16C2T-VFIR3 - Hikvision Varifocal IR Bullet
+16. DS-2CD2632F-IS - Hikvision Network IR Bullet
+17. DS-7316HQHI-SH - Hikvision 16-Channel DVR
+18. DS-7332HGHI-SH - Hikvision 32-Channel DVR
+19. DS-1002KI - Hikvision PTZ Keyboard Controller
+20. DS-7716NI-E4 - Hikvision 16-Channel NVR
+21. PTZ Joystick Controller - CCTV Camera Controller
+
+================================================================================
+TIME ATTENDANCE & ACCESS CONTROL (19 Products)
+================================================================================
+
+22. AC-2100 - Access Control Terminal
+23. AC-5000 - Biometric Attendance System
+24. AC-6000 - Time Attendance Terminal with Touchscreen
+25. AC-4000 - Access Control System
+26. Zebra Label Printer - Desktop Barcode Printer
+27. Evolis Card Printer - ID Card Printer
+28. Primacy Card Printer - Professional Card Printer
+29. U-260 ZK - ZKteco Time Attendance Terminal
+30. F-18 - Fingerprint Access Control
+31. TF-1700 - Biometric Access Terminal
+32. 100-R - Access Control Keypad
+33. EG-280LED - Electromagnetic Door Lock
+34. CDV50V - Video Intercom Monitor
+35. F710X - Face Recognition Terminal
+36. IFACE800 - Face Recognition Access Control
+37. POS System - Complete Point of Sale System
+38. Barcode Scanner - Handheld Laser Scanner
+39. Zebra Card Printer - Desktop ID Printer
+40. Receipt Printer - Thermal POS Printer
+
+================================================================================
+QUEUE MANAGEMENT SYSTEM (12 Products)
+================================================================================
+
+41. Queue Display 99 - LED Digital Counter Display
+42. Queue Kiosk - Ticket Dispenser Kiosk
+43. Queue Keypad - Queue Management Control Panel
+44. Ticket Dispenser - Take-A-Number System
+45. PA Amplifier - Public Address System Amplifier
+46. Ceiling Speaker - Flush Mount PA Speaker
+47. Megaphone - Handheld Loudspeaker
+48. Queue Microphones - Desktop Gooseneck Microphones
+
+================================================================================
+ANTI-SHoplifting & BURGLAR ALARM SYSTEM (12 Products)
+================================================================================
+
+49. EAS Antenna - Retail Security Gate System
+50. EAS Tags - Anti-Theft Security Tags Collection
+51. Tag Detacher - Handheld Security Tag Remover
+52. Alarm Control Panel - Security System Main Unit
+53. Alarm Siren - Outdoor Security Siren with Strobe
+54. PIR Motion Sensor - Passive Infrared Detector
+55. Magnetic Contacts - Door/Window Security Sensors
+56. Smoke Detector - Fire Alarm Smoke Sensor
+57. Security Keypad - Alarm System Keypad
+58. Metal Detector Gate - Walk-Through Security Scanner
+59. Handheld Metal Detector - Portable Security Wand
+60. Glass Break Sensor - Acoustic Glass Break Detector
+
+================================================================================
+ADDITIONAL SECURITY PRODUCTS (9 Products)
+================================================================================
+
+61. Hikvision Bullet Camera - White Outdoor Camera
+62. Hikvision Fisheye Camera - 360-Degree Panoramic Camera
+63. Time Attendance Terminal - Biometric Touchscreen Terminal
+64. Fire Alarm Panel - Fire Safety Control System
+65. PTZ Controller - Camera Joystick Controller
+66. Hikvision PTZ Dome - Motorized Dome Camera
+67. Face Recognition Terminal - Wall-Mounted Face Reader
+68. Fingerprint Access Control - Slim Biometric Reader
+69. Network Video Recorder - 16-Channel NVR
+
+================================================================================
+ALARM & PBX SYSTEMS (7 Products)
+================================================================================
+
+70. Alarm Keypad - Security System Keypad
+71. Alarm Control Box - Main Control Unit with Adapter
+72. Panasonic TDA100 - Business PBX Phone System
+73. Panasonic TDA200 - Enterprise PBX System
+74. Outdoor Siren - Weatherproof Alarm Siren
+75. PIR Sensor - Motion Detection Sensor
+76. Smoke Detector 2 - Fire Detection Sensor
+
+================================================================================
+                              TOTAL: 76 PRODUCTS
+================================================================================
