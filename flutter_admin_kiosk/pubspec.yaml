@@ -1,0 +1,15 @@
+name: brand_slots_admin_kiosk
+description: Kiosk-style Flutter wrapper for the hosted Brand Slots admin screen.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.7.0
+
+flutter:
+  uses-material-design: true
