@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { submitQuoteRequest } from '@/lib/quoteSubmission';
 
 const contactInfo = [
-  { icon: MapPin, label: 'Office Address', value: 'Khalid bin Al Waleed Street, Opp. Al TAZAJ, Jeddah' },
+  { icon: MapPin, label: 'Office Address', value: 'Khalid bin Al Waleed Street, Opp. AL TAZAJ, Jeddah' },
   { icon: Phone, label: 'Phone', value: '+966 55 777 0791' },
-  { icon: Mail, label: 'Email', value: 'sales@topvisioncompany.com' },
+  { icon: Mail, label: 'Email', value: 'info@topvision.sa' },
   { icon: Clock, label: 'Working Hours', value: 'Saturday – Thursday: 9:00 AM – 6:00 PM' },
 ];
 

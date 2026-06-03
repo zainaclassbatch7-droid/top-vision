@@ -61,6 +61,7 @@ const logos = [
   { file: 'Herfy.png', name: 'Herfy', sector: 'F&B' },
   { file: 'MBL.png', name: 'MBL', sector: 'Corporate' },
   { file: 'Ministry_of_Health.png', name: 'Ministry of Health', sector: 'Government' },
+  { file: 'logo.jpg.png', name: 'Tuners Garage', sector: 'Automotive' },
 ];
 
 const sectors = ['All', ...Array.from(new Set(logos.map((l) => l.sector))).sort()];

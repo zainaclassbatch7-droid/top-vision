@@ -173,7 +173,7 @@ export default function Footer() {
                     <MapPin className="w-3.5 h-3.5 text-[#C8102E]" />
                   </div>
                   <span className="text-sm text-white/40 leading-relaxed">
-                    Khalid bin Al Waleed Street, Opp. Al TAZAJ, Jeddah
+                    Khalid bin Al Waleed Street, Opp. AL TAZAJ, Jeddah
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
@@ -186,8 +186,8 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-lg bg-[#C8102E]/8 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-3.5 h-3.5 text-[#C8102E]" />
                   </div>
-                  <a href="mailto:sales@topvisioncompany.com" className="text-sm text-white/40 hover:text-[#C8102E] transition-colors">
-                    sales@topvisioncompany.com
+                  <a href="mailto:info@topvision.sa" className="text-sm text-white/40 hover:text-[#C8102E] transition-colors">
+                    info@topvision.sa
                   </a>
                 </li>
               </ul>

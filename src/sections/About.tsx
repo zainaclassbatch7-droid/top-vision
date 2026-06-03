@@ -292,7 +292,7 @@ export default function About() {
                 </div>
                 <div>
                   <div className="text-[#1A1A1A] font-bold text-base mb-1">Khalid bin Al Waleed Street, Jeddah</div>
-                  <div className="text-[#1A1A1A]/65 text-sm leading-relaxed">Opp. Al TAZAJ, Jeddah, Saudi Arabia</div>
+                  <div className="text-[#1A1A1A]/65 text-sm leading-relaxed">Opp. AL TAZAJ, Jeddah, Saudi Arabia</div>
                 </div>
               </div>
             </div>
