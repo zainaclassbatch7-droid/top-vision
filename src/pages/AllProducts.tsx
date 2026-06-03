@@ -14,7 +14,7 @@ const categoryIcons = [Camera, Fingerprint, Users, Bell, Phone, ShieldCheck];
 const contactInfo = [
   { icon: MapPin, label: 'Office Address', value: 'Khalid bin Al Waleed Street, Opp. AL TAZAJ, Jeddah' },
   { icon: Phone, label: 'Phone', value: '012-6570179' },
-  { icon: Mail, label: 'Email', value: 'info@topvision.sa' },
+  { icon: Mail, label: 'Email', value: 'sales@topvisioncompany.com' },
   { icon: Clock, label: 'Working Hours', value: 'Saturday – Thursday: 9:00 AM – 6:00 PM' },
 ];
 
