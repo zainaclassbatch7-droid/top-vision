@@ -197,7 +197,7 @@ export default function Footer() {
           {/* ── Bottom bar ── */}
           <div className="border-t border-white/[0.06] pt-7 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white/25">
-              © 2025 Top Vision Security Company LLC. All Rights Reserved.
+              © 2026 Top Vision Security Company LLC. All Rights Reserved.
             </p>
             <div className="flex items-center gap-5 text-xs text-white/25">
               <a href="#" className="hover:text-white/60 transition-colors">Privacy Policy</a>

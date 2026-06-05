@@ -290,7 +290,7 @@ export default function AllProducts() {
               subtitleClassName="text-[9px] text-white/40 tracking-[0.16em]"
             />
           </Link>
-          <p className="text-xs text-white/30">© 2025 Top Vision Security Company LLC. All Rights Reserved.</p>
+          <p className="text-xs text-white/30">© 2026 Top Vision Security Company LLC. All Rights Reserved.</p>
           <Link to="/" className="btn-arrow group inline-flex items-center gap-2 text-sm font-medium text-white/50 hover:text-white transition-colors">
             <ArrowLeft className="w-3.5 h-3.5" /> Back to Home
           </Link>
